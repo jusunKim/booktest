@@ -1,17 +1,16 @@
-package com.example.demo.controlloer;
+package com.example.demo.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 import com.example.demo.dao.BookDAO;
-import com.example.demo.dao.OrdersDAO;
 
 import lombok.Setter;
 
 @Controller
 @Setter
-public class OrdersController {
+public class BookController {
 	@Autowired
-	private OrdersDAO dao;
+	private BookDAO dao;
 }
 
