@@ -13,7 +13,7 @@ import lombok.Setter;
 
 @Controller 
 @Setter 
-public class BookController {
+public class BookController { 
 	@Autowired
 	private BookService bs;
 	
