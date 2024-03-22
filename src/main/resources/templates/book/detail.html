@@ -6,12 +6,12 @@
 <script src = "https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script>
 	$(function(){
-		$("#btnDelete").click(function(){
+		$("#btnDele").click(function(){
 			var re = confirm("정말로 삭제하시겠습니까?")
 			if(re==true){
 				var bookid=$("#bookid").val();
 				location.href="/book/delete?bookid="+bookid;
-			}
+			} 
 		});
 	});
 </script>
@@ -26,7 +26,7 @@
 	도서가격 : <span th:text="${b.price}"></span><br>
 	출판사명 : <span th:text="${b.publisher}"></span><br>
 	<a th:href="@{/book/update(bookid=${b.bookid})}">수정하기</a>
-	<a href="#" id="btnDelete">삭제</a>
+	<a href="#" id="btnDele">삭제하기</a>
 	
 </body>
 </html>

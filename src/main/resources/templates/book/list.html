@@ -12,11 +12,13 @@
 			<th>도서명</th>	
 			<th>가격</th>			
 			<th>출판사</th>			
-		</tr> 
+		</tr>  
 
 		<tr th:each="b:${list}">
 			<td th:text="${b.bookid}"></td>
-			<td th:text="${b.bookname}"></td>
+			<td>
+				<a th:href="@{'/update?id=' + ${b.bookname}}" th:text="${b.bookname}"></a>
+			</td>
 			<td th:text="${b.price}"></td>
 			<td th:text="${b.publisher}"></td>
 		</tr>
