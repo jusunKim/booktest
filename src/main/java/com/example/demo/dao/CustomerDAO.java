@@ -10,5 +10,8 @@ import com.example.demo.entity.Customer;
 public interface CustomerDAO extends JpaRepository<Customer, String> {
 	@Query(value = "select nvl(max(custid),0)+1 from customer", nativeQuery = true)
 	public int getNextNo();
+	
+	@Query(value="select * from customer where custid=?1 and password=?2", nativeQuery = true)
+	public Customer loginCheck(String custid, String password);
 }
  
