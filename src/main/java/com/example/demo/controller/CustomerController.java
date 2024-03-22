@@ -43,7 +43,7 @@ public class CustomerController {
 		String pwd = c.getPassword();
 		Customer user = cs.loginCheck(id, pwd);
 		if(user!=null) {
-			session.setAttribute("customer", user);
+			session.setAttribute("customer", user.getName());
 		}else {
 			view = "redirect:/customer/login";
 		}
