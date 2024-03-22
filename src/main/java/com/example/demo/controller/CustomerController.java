@@ -3,8 +3,8 @@ package com.example.demo.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import com.example.demo.dao.BookDAO;
-import com.example.demo.dao.CustomerDAO;
+
+import com.example.demo.service.CustomerService;
 
 import lombok.Setter;
 
@@ -12,6 +12,6 @@ import lombok.Setter;
 @Setter
 public class CustomerController {
 	@Autowired
-	private CustomerDAO dao; 
+	private CustomerService cs;
 }
 
