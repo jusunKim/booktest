@@ -2,40 +2,28 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>회원 가입</title>
+<title>���� 媛���</title>
  <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
  <script>
-$(function(){
-    function pwCheck(){
-        var pwd = $("#pwd").val();
-        var pwdCheck = $("#pwd_check").val(); 
-        var checkMsg = $("#checkMsg");
-        if(pwd === pwdCheck){ 
-            checkMsg.css("color", "#0000FF"); 
-            checkMsg.html("비밀번호 일치"); 
-        }else{
-            checkMsg.css("color", "#FF0000"); 
-            checkMsg.html("비밀번호 불일치"); 
-        }
-    }
-
-    $("#pwd, #pwd_check").on("input", pwCheck);
-});
-
+	 $(function(){
+		 $("#btnCheck").click(function(){
+			 
+		 })
+	 })
  </script>
 </head>
 <body>
-	<h2>회원 가입</h2>
+	<h2>���� 媛���</h2>
 	<hr />
 	<form action="/memberJoin" method="post">
 	ID: <input type="text" name="custid"/><br />
-	패스워드 : <input type="password" name="password" id="pwd"/><br />
-	패스워드 재입력 : <input type="password" id="pwd_check"/>
-	<span id="checkMsg"></span><br />
-	이름: <input type="text" name="name"/><br />
-	전화번호: <input type="text" name="phone"/><br />
-	주소: <input type="text" name="addr"/><br />
-	<input type="submit" value="회원가입"/>
+	�⑥�ㅼ���� : <input type="password" name="password"/><br />
+	以�蹂듯����: <input type="password" name="password_check"/>
+	 <button id="btnCheck">以�蹂듯����</button><br />
+	�대�: <input type="text" name="name"/><br />
+	����踰���: <input type="text" name="phone"/><br />
+	二쇱��: <input type="text" name="addr"/><br />
+	<input type="submit" value="����媛���"/>
 	</form>
 </body>
 </html>
