@@ -11,7 +11,7 @@ import com.example.demo.entity.Book;
 
 import lombok.Setter;
 
-@Service
+@Service 
 @Setter
 public class BookService {
 	@Autowired 

@@ -12,7 +12,7 @@ import com.example.demo.dao.BookDAO;
 import lombok.Setter;
 
 @Controller 
-@Setter
+@Setter 
 public class BookController {
 	@Autowired
 	private BookService bs;
