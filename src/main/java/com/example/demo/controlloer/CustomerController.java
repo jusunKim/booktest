@@ -12,6 +12,6 @@ import lombok.Setter;
 @Setter
 public class CustomerController {
 	@Autowired
-	private CustomerDAO dao;
+	private CustomerDAO dao; 
 }
 
