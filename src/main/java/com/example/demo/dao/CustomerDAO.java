@@ -11,3 +11,4 @@ public interface CustomerDAO extends JpaRepository<Customer, String> {
 	@Query(value = "select nvl(max(custid),0)+1 from customer", nativeQuery = true)
 	public int getNextNo();
 }
+ 

@@ -7,5 +7,5 @@ import com.example.demo.entity.Book;
 
 @Repository
 public interface BookDAO extends JpaRepository<Book, Integer> {
-
+ 
 }

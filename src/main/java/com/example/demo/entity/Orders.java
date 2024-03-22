@@ -8,23 +8,25 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Data
 @Table(name="orders")
 public class Orders {
+	
 	@Id
 	private int orderid;
 	
 	@ManyToOne
-	@JoinColumn(name="custid", insertable= true, updatable=true)
-	private Customer customer; 
+	@JoinColumn(name = "custid", insertable = true, updatable = true)
+	private Customer customer;
 	
 	@ManyToOne
-	@JoinColumn (name="bookid", insertable=true, updatable = true)
+	@JoinColumn(name = "bookid", insertable = true, updatable = true)
 	private Book book;
 	
 	private int saleprice;
 	private Date orderdate;
-
 }
