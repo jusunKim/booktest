@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import com.example.demo.dao.BookDAO;
@@ -16,11 +17,9 @@ public class BookController {
 	private BookService bs;
 	
 	
-	@GetMapping("/book/detail")
-	public String delete() {
-		String view = "/book/manager/list.html";
-
-		return view;
+	@GetMapping("/book/list")
+	public void list(Model model) {
+		model.addAttribute("list",bs.findAll());
 	}
 }
 
