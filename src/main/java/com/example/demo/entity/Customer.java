@@ -11,7 +11,7 @@ import lombok.Data;
 @Data
 @Table(name="customer")
 public class Customer {
-	
+	 
 	@Id
 	private String custid;
 	private String password;

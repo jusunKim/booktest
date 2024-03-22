@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import com.example.demo.service.BookService;
 import lombok.Setter;
 
-@Controller
+@Controller 
 @Setter
 public class BookController {
 	@Autowired
