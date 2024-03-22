@@ -23,4 +23,10 @@ public class CustomerService {
 	public List<Customer> findAll(){
 		return dao.findAll();
 	}
+	
+	public Customer loginCheck(String id, String password) {
+		Customer c = null;
+		c = dao.loginCheck(id, password);
+		return c;
+	}
 }
