@@ -25,4 +25,3 @@ public class BookController {
 		model.addAttribute("b",bs.findByID(bookid));
 	}
 }
-

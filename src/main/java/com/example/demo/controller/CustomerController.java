@@ -10,6 +10,7 @@ import com.example.demo.dao.CustomerDAO;
 import com.example.demo.entity.Customer;
 import com.example.demo.service.CustomerService;
 
+import jakarta.servlet.http.HttpSession;
 import lombok.Setter;
 
 @Controller
@@ -35,8 +36,18 @@ public class CustomerController {
 	}
 	
 	@PostMapping("/customer/login")
-	public String loginSubmit(Customer c) {
+	public String loginSubmit(Customer c, HttpSession session) {
+		System.out.println(c); //확인용
 		String view = "redirect:/book/list";
+		String id = c.getCustid();
+		String pwd = c.getPassword();
+		Customer user = cs.loginCheck(id, pwd);
+		if(user!=null) {
+			session.setAttribute("customer", user);
+		}else {
+			view = "redirect:/customer/login";
+		}
+		
 		return view;
 	}
 }
