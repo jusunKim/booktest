@@ -32,7 +32,7 @@ public class OrdersController {
 	
 	@GetMapping("/orders/insert")
 	public void insert(Model model){
-		model.addAttribute("bList", bs.findAll());
+//		model.addAttribute("bList", bs.findAll());
 //		model.addAttribute("cList", cs.findAll());
 		model.addAttribute("orderid", os.getNextNo());
 	}
