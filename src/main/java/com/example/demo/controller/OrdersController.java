@@ -1,12 +1,5 @@
 package com.example.demo.controller;
-<<<<<<< HEAD
-
-
 import java.util.List;
-=======
-import java.util.List; 
->>>>>>> branch 'main' of https://github.com/jusunKim/booktest.git
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -35,14 +28,13 @@ public class OrdersController {
 	@Autowired
 	private OrdersService os;
 	
-	@GetMapping("/listOrder")
-	public void list(Model model) {
-		model.addAttribute("list", os.findAll());
+	@GetMapping("/orders/list")
+	public void list(Model model, String keyword) {
+		model.addAttribute("list", os.findAll(keyword));
 	}
 	
 	@GetMapping("/orders/insert")
 	public void insert(Model model){
-		//model.addAttribute("bList", bs.findAll());
 		model.addAttribute("bList", bs.findAll());
 		model.addAttribute("cList", cs.findAll());
 		model.addAttribute("orderid", os.getNextNo());
@@ -51,7 +43,7 @@ public class OrdersController {
 	@PostMapping("/insertOrder")
 	public String save(Orders o) {
 		String view = "redirect:/orders/insert";
-		os.save(o);
+		os.insert(o);
 		return view;
 	}
 	
