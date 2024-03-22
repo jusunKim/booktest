@@ -21,7 +21,7 @@ public class BookController {
 	@GetMapping("/book/list")
 	public void list(Model model) {
 		model.addAttribute("list",bs.findAll());
-	}
+	} 
 	
 	@GetMapping("/book/detail")
 	public void detail(int bookid, Model model) {
