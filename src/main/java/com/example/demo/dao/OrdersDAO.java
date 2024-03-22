@@ -5,13 +5,15 @@ import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
 
 import com.example.demo.entity.Orders;
 
 
 import jakarta.transaction.Transactional;
-
+@Repository
 public interface OrdersDAO extends JpaRepository<Orders, Integer> {
 	@Query(value = "select nvl(max(orderid),0)+1 from orders", 
 			nativeQuery = true)

@@ -35,12 +35,12 @@ public class OrdersController {
 	
 	@GetMapping("/orders/insert")
 	public void insert(Model model){
-		model.addAttribute("bList", bs.findAll());
-		model.addAttribute("cList", cs.findAll());
+//		model.addAttribute("bList", bs.findAll());
+//		model.addAttribute("cList", cs.findAll());
 		model.addAttribute("orderid", os.getNextNo());
 	}
 	
-	@PostMapping("/insertOrder")
+	@PostMapping("/orders/save")
 	public String save(Orders o) {
 		String view = "redirect:/orders/insert";
 		os.insert(o);
