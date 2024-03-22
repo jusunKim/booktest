@@ -28,5 +28,16 @@ public class CustomerController {
 		cs.insert(c);
 		return view;
 	}
+	
+	@GetMapping("/customer/login")
+	public void loginForm() {
+		
+	}
+	
+	@PostMapping("/customer/login")
+	public String loginSubmit(Customer c) {
+		String view = "redirect:/book/list";
+		return view;
+	}
 }
 
