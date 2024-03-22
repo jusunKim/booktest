@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import com.example.demo.entity.Orders;
 import com.example.demo.service.BookService;
 import com.example.demo.service.CustomerService;
-import com.example.demo.service.OrdersService;
+import com.example.demo.service.OrdersService; 
 
 import lombok.Setter;
 
@@ -37,7 +37,7 @@ public class OrdersController {
 		model.addAttribute("orderid", os.getNextNo());
 	}
 	
-	@PostMapping("/insertOrder")
+	@PostMapping("/orders/save")
 	public String save(Orders o) {
 		String view = "redirect:/orders/insert";
 		os.insert(o);

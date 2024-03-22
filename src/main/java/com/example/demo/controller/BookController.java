@@ -6,9 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import com.example.demo.dao.BookDAO;
 import com.example.demo.service.BookService;
-import com.example.demo.dao.BookDAO;
 import lombok.Setter;
 
 @Controller 
