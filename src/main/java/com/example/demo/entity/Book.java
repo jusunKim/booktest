@@ -9,7 +9,7 @@ import lombok.Data;
 @Data
 @Table(name="book")
 public class Book {
-	
+	 
 	@Id
 	private int bookid;
 	private String bookname;

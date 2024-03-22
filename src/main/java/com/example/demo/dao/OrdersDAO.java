@@ -16,7 +16,7 @@ public interface OrdersDAO extends JpaRepository<Orders, Integer> {
 	@Query(value = "select nvl(max(orderid),0)+1 from orders", 
 			nativeQuery = true)
 	public int getNextNo();
-	
+	 
 	@Modifying
 	@Query(value ="insert into orders o(o.orderid,o.custid,o.bookid,o.saleprice,o.orderdate) values(:#{#o.orderid},:#{#o.customer.custid},:#{#o.book.bookid},:#{#o.saleprice},sysdate)",nativeQuery = true)
 	@Transactional

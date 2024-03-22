@@ -10,7 +10,7 @@ import com.example.demo.service.BookService;
 import com.example.demo.dao.BookDAO;
 import lombok.Setter;
 
-@Controller
+@Controller 
 @Setter
 public class BookController {
 	@Autowired
