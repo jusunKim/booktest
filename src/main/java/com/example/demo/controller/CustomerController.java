@@ -17,15 +17,15 @@ public class CustomerController {
 	@Autowired
 	private CustomerService cs;
 	
-	@GetMapping("/memberJoin")
+	@GetMapping("/customer/memberJoin")
 	public void joinForm() {
 		
 	}
 	
-	@PostMapping("/memberJoin")
+	@PostMapping("/customer/memberJoin")
 	public String joinSubmit(Customer c) {
-		String view = "redirect:/listBook어쩌구첫화면?";
-		System.out.println(c.getName());
+		String view = "redirect:/book/list";
+		cs.insert(c);
 		return view;
 	}
 }
